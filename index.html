@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header>
+		<h1 id="title">Product Survey</h1>
+	</header>
+	<div class = "content">
+		<p id ="description">Give us your feedback on our products!</p>
+		<form id = "survey-form" method ='GET' action="https://crossorigin.me/https://freecodecamp.com">
+			<div class='prompts'>
+				<label id="name-label" for = "name"><p><sup>*</sup>Name:</p></label>
+				<label id="email-label" for = "email"><p><sup>*</sup>Email:</p></label>
+				<label id="number-label" for = "number"><p><sup>*</sup>Phone Number:</p></label>
+				<p>What product are you using?</p>
+				<p id="likely"><sup>*</sup>How likely are you to reccomend this product to a friend?</p>
+				<label id="checkbox-label" for = "checkbox"><p id="checkbox-label">What tools would you want to see added? <br>(Check all that apply):</p></label>
+				<label id="additional-com" for = "additional-comments"><p>Any additional comments?</p></label>
+			</div>
+			<div class = 'fields'>
+				<input class = "text-box" id= 'name' type="text" placeholder="Your Name Here" required>
+				<input class = "text-box" id= 'email' type="email" placeholder="Your Email Here" required>
+				<input class = "text-box" id= 'number' type="number" name="quantity" min="1" max="99" placeholder="Your Age Here" required>
+				<select id="dropdown" class="dropdown">
+					<option disabled value>Select a tool</option>
+					<option  value="hammer">Hammer</option>
+					<option  value="screwdriver">Screwdriver</option>
+					<option  value="wrench">Wrench</option>
+					<option  value="saw">Saw</option>
+				</select>
+				<ul style="list-style: none;">
+					<li class ="radio"><label>Very<input name="radio-buttons" value="1" type="radio" class="userRatings"></label></li>
+					<li class ="radio"><label>Possibly<input name="radio-buttons" value="2" type="radio" class="userRatings"></label></li>
+					<li class ="radio"><label>I hate you<input name="radio-buttons" value="3" type="radio" class="userRatings"></label></li>
+				</ul>
+				<ul id="tools-added" style="list-style: none;">
+					<li class ="checkbox"><label>Crowbar<input name="checkboxes" value="1" type="checkbox" class="userRatings"></label></li>
+					<li class ="checkbox"><label>Vise<input name="checkboxes" value="2" type="checkbox" class="userRatings"></label></li>
+					<li class ="checkbox"><label>Stud finder<input name="checkboxes" value="3" type="checkbox" class="userRatings"></label></li>
+					<li class ="checkbox"><label>Drill<input name="checkboxes" value="3" type="checkbox" class="userRatings"></label></li>
+				</ul>
+        <textarea rows="4" cols="50"> "Additional Comments..."</textarea>
+			</div>
+			<button id= 'submit' type="submit">Submit!</button>
+		</form>
+	</div>
+	<footer>
+	
+	</footer>
+</body>
+
